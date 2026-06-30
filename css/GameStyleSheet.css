@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.Background {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../images/GameBackground.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+
+    animation: moveBackground 15s linear infinite;
+    animation-play-state: paused;
+}
+
+.Highway {
+    height: 280%;
+    width: 500%;
+    display: block;
+    background-image: url('../images/Highway.png');
+    background-size: auto 100%;
+    position: relative;
+    bottom: 0;
+    left : 0;   
+    right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+
+    animation: moveHighway 7s linear infinite;
+    animation-play-state: paused;
+}
+
+.Car{
+    width: 400px;
+    left: 20%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.Car img{
+    width: 100%;
+    animation: moveCar 1s linear infinite;
+    animation-play-state: paused;
+}
+
+.CarWheel{
+    width: 100px;
+    left: 15.5%;
+    bottom: 83px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.CarWheel img{
+    width: 100%;
+    animation: moveCarWheel 0.5s linear infinite;
+    animation-play-state: paused;
+}
+
+.FrontWheel{
+    left: 130%;
+    position: absolute;
+}
+
+.Background.move,
+.Highway.move,
+.Car.move img,
+.CarWheel.move img{
+    animation-play-state: running;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -2182px;
+    }
+}
+
+@keyframes moveHighway {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-60%);
+    }
+}
+
+@keyframes moveCar{
+    100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
+@keyframes moveCarWheel{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.GameUI{
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+}
+
+.Stats{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Stats img{
+    width: 50px;
+    height: 50px;
+}
+
+.Stats span{
+    font-size: 16px;
+    font-family: cursive, sans-serif, serif, 'Times New Roman', Arial;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+}
+
+#FuelStats img{
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    z-index: 4;
+}
+
+#StaminaStats img{
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    z-index: 4;
+}
+
+#MoraleStats img{
+    position: absolute;
+    top: 30px;
+    left: 135px;
+    z-index: 4;
+}
+
+#MoneyStats img{
+    position: absolute;
+    top: 90px;
+    left: 135px;
+    z-index: 4;
+}
+
+#TensionStats img{
+    position: absolute;
+    top: 150px;
+    left: 35px;
+    z-index: 4;
+}
+
+#FuelStats span{
+    position: absolute;
+    top: 45px;
+    left: 80px;
+    z-index: 4;
+}
+
+#StaminaStats span{
+    position: absolute;
+    top: 105px;
+    left: 80px;
+    z-index: 4;
+}
+
+#MoraleStats span{
+    position: absolute;
+    top: 45px;
+    left: 180px;
+    z-index: 4;
+}
+
+#MoneyStats span{
+    position: absolute;
+    top: 105px;
+    left: 180px;
+    z-index: 4;
+}
+
+#TensionStats span{
+    position: absolute;
+    top: 165px;
+    left: 80px;
+    z-index: 4;
+}
+
+.Instruction{
+    position: absolute;
+    top: 195px;
+    left: 550px;
+    white-space: nowrap;
+    font-size: 24px;
+    font-family: cursive, sans-serif, serif, 'Times New Roman', Arial;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+.Instruction.fade-out{
+    display: none;
+}
+
+.destination {
+    position: absolute;
+    top: 50%;
+    left: 520%;
+    width: 500px;
+    height: 170px;
+    color: black;
+    z-index: 4;
+}
+
+.destination img{
+    position: absolute;
+    width: 20%;
+    height: 55%;
+    z-index: 4;
+}
+
+.destination progress{
+    position: absolute;
+    top: 27px;
+    left: 82px;
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.destination span{
+    position: absolute;
+    top: 30px;
+    left: 215px;
+    font-size: 18px;
+    font-family: cursive, sans-serif, serif, 'Times New Roman', Arial;
+    font-weight: bold;
+    color: black;
+    z-index: 4;
+}
+
+.Day {
+    position: absolute;
+    top: 10px;
+    left: 1438px;
+    width: 80px;
+    height: 35px;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+    font-family: cursive, sans-serif, serif, 'Times New Roman', Arial;
+    font-style: italic;
+    color: white;
+    background-color: rgb(43, 97, 224);
+    border: 2px solid black;
+    z-index: 4;
+}
+
+#EventIcon{
+    position: absolute;
+    top: 58%;
+    left: 80%;
+    width: 200px;
+    height: 200px;
+    z-index: 4;
+    display: none;
+}
+
+#EventIcon.show {
+    display: block;
+}
+
+#EventIcon img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    animation: 
+        EventPopUp 0.75s ease-out 1,
+        EventShake 0.75s ease-in-out 0.35s infinite;
+}
+
+@keyframes EventPopUp { 
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes EventShake {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: rotate(5deg) translateY(-5px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(0);
+    }
+    75% {
+        transform: rotate(-5deg) translateY(-5px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    display: none;
+    z-index: 9;
+    pointer-events: none;
+}
+
+body:has(.PauseMenu.active)::before {
+    display: block;
+}
+
+.PauseMenu {
+    background-image: url("../images/PauseScreen.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 60%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    box-sizing: border-box;
+    padding: 90px 80px 80px;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    text-align: center;
+    z-index: 10;
+}
+
+.PauseMenu.active{
+    display: flex;
+}
+
+#PauseText {
+    margin: -1vh;
+    font-size: 42px;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+}
+
+.PauseHR {
+    width: 62%;
+    margin: 0;
+
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+#PauseCG {
+    width: 60%;
+    height: 50%;
+    object-fit:fill;
+}
+
+.PauseButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#ResumeButton,
+#PauseToHomeButton {
+    width: 130px;
+    height: 40px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+
+    background-color: #f6d94a;
+    border: 2px solid #777;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+#ResumeButton:hover,
+#PauseToHomeButton:hover {
+    background-color: orange;
+    transform: translateY(-2px);
+}
+
+#ResumeButton:active,
+#PauseToHomeButton:active {
+    transform: translateY(1px);
+}

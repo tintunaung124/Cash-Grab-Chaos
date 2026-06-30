@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Trip Simulator</title>
+    <link rel="stylesheet" href="css/GameStyleSheet.css">
+</head>
+<body>
+    <div class="Background">
+        <div class = "GameUI">
+            <img src = "images/UI_Box.png" width = 300% height = 280% alt = "UI Box" class = "UIBox">
+            
+            <div id = "FuelStats" class = "Stats">
+                <img src="images/FuelIcon.png" alt="Fuel Icon">
+                <span id="FuelValue"></span>
+            </div>
+
+            <div id = "StaminaStats" class = "Stats">
+                <img src="images/StaminaIcon.png" alt="Stamina Icon">
+                <span id="StaminaValue"></span>
+            </div>
+
+            <div id = "MoraleStats" class = "Stats">
+                <img src="images/MoraleIcon.png" alt="Morale Icon">
+                <span id="MoraleValue"></span>
+            </div>
+
+            <div id = "MoneyStats" class = "Stats">
+                <img src="images/MoneyIcon.png" alt="Money Icon">
+                <span id="MoneyValue"></span>
+            </div>
+
+            <div id = "TensionStats" class = "Stats">
+                <img src="images/TensionIcon.png" alt="Tension Icon">
+                <span id="TensionValue"></span>
+            </div>
+
+            <div class = "Day">
+                Day | <span id="DayValue">1</span>
+            </div>
+
+            <div class = "destination">
+                <img src="images/DestinationIcon.png" alt="Destination Icon">
+                <progress id="DestinationProgress" value="0" max="100"></progress>
+                <span id="DestinationValue">0%</span>
+            </div>
+
+            <div class = "Instruction">
+                <span id="InstructionText">Hold '<b>D</b>' or '<b>-></b>' key to drive!</span>
+            </div>
+        </div>
+
+        <div class = "PauseMenu">
+            <h1 id="PauseText">Rest Stop!</h1>
+            <hr class="PauseHR">
+            <img src="./images/PauseCG.png" id="PauseCG" alt="Pause CG">
+            <hr class="PauseHR">
+            <div class="PauseButtons">
+                <button id="ResumeButton">Return</button>
+                <button id="PauseToHomeButton">Main Menu</button>
+            </div>
+        </div>
+
+        <div id = "EventIcon" class = "EventPopUp">
+            <img src="images/EventIcon.png" alt="Event Icon">
+        </div>
+
+        <div class="Highway"></div>
+
+        <div class="Car">
+            <img src="images/CarSideView.png" alt="Car">
+        </div>
+
+        <div class="CarWheel">
+            <img src="images/CarTire.png" class = "BackWheel" alt="Back Wheel">
+            <img src="images/CarTire.png" class = "FrontWheel" alt="Front Wheel">
+        </div>
+    </div>
+
+<script src="js/player.js"></script>
+<script src="js/car.js"></script>
+<script src="js/DataStorage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/EventLoop&Stats.js"></script>
+<script src="js/MovementScript.js"></script>
+
+
+<script>
+window.addEventListener("load", function () {
+
+    loadPlayerData();
+    updateStats();
+
+});
+</script>
+
+</body>
+</html>

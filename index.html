@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="sky">
+    <img src="images/logo.png" class="logo">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+
+    <div class="bird-container bird-container--one">
+    <div class="bird bird--one"></div>
+</div>
+
+<div class="bird-container bird-container--two">
+    <div class="bird bird--two"></div>
+</div>
+
+<div class="bird-container bird-container--three">
+    <div class="bird bird--three"></div>
+</div>
+
+<div class="bird-container bird-container--four">
+    <div class="bird bird--four"></div>
+</div>
+</section>
+
+<section class = "bottom"><img src="images/car.png" class="car"></section>
+
+<button class="play-btn" type="button" onclick="startNewGame()"> PLAY</button>
+
+<a href="Gallery.html"><button class="gallery-btn" type="button">Gallery</button></a>
+
+<a href="Avatar.html"><button class="avatar-btn" type="button">Avatar</button></a>
+
+<a href="Info.html"><button class="info-btn" type="button">Info</button></a>
+
+<script>
+function startNewGame() {
+
+    localStorage.removeItem("playerStamina");
+    localStorage.removeItem("playerMoney");
+    localStorage.removeItem("playerMorale");
+    localStorage.removeItem("playerTension");
+    localStorage.removeItem("carFuel");
+    localStorage.removeItem("carDistanceRemaining");
+    localStorage.removeItem("playerDay");
+
+    window.location.href = "Prologue.html";
+
+}
+</script>
+   
+</body>
+</html>

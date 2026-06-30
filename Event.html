@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Event!</title>
+
+    <link rel="stylesheet" href="./css/Events.css">
+    <link rel="stylesheet" href="./css/GameStyleSheet.css">
+
+</head>
+
+<body>
+
+    <div class="GameUI">
+
+        <img src="images/UI_Box.png"
+        width="300%"
+        height="280%"
+        alt="UI Box"
+        class="UIBox">
+
+        <div id="FuelStats" class="Stats">
+
+            <img src="images/FuelIcon.png"
+            alt="Fuel Icon">
+
+            <span id="FuelValue"></span>
+
+        </div>
+
+        <div id="StaminaStats" class="Stats">
+
+            <img src="images/StaminaIcon.png"
+            alt="Stamina Icon">
+
+            <span id="StaminaValue"></span>
+
+        </div>
+
+        <div id="MoraleStats" class="Stats">
+
+            <img src="images/MoraleIcon.png"
+            alt="Morale Icon">
+
+            <span id="MoraleValue"></span>
+
+        </div>
+
+        <div id="MoneyStats" class="Stats">
+
+            <img src="images/MoneyIcon.png"
+            alt="Money Icon">
+
+            <span id="MoneyValue"></span>
+
+        </div>
+
+        <div id="TensionStats" class="Stats">
+
+            <img src="images/TensionIcon.png"
+            alt="Tension Icon">
+
+            <span id="TensionValue"></span>
+
+        </div>
+
+    </div>
+
+    <main id="game-container" class="TextBox">
+
+    <header id="event-title" class="Speaker"></header>
+
+    <article id="event-description" class="Text"></article>
+
+    <nav id="choices"></nav>
+
+    <img id="event-image-1" src="" alt="">
+    <img id="event-image-2" src="" alt="">
+
+</main>
+
+    <script src="./js/player.js"></script>
+    <script src="./js/car.js"></script>
+    <script src="./js/DataStorage.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/EventLoop&Stats.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/event.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Selection</title>
+    <link rel="stylesheet" href="./css/Avatar.css">
+</head>
+<body> 
+    <main>
+        <div id="Container">
+            <div id="character-selection">
+
+            <button onclick="previousCharacter()">◀</button>
+
+            <img id="character-image" src="images/Captain Compass.png" alt="Character">
+
+            <button onclick="nextCharacter()">▶</button>
+
+            <div id="text-container">
+                <p id="selected-character"></p>
+            </div>
+
+            </div>
+        </div>
+        
+        <button id = "select-btn" onclick="selectCharacter()">
+            Select Character
+        </button>
+
+        <a href="index.html">
+        <button id="backButton">Back to Menu</button>
+    </a>
+</main>
+
+<script src="./js/avatar.js"></script>
+    
+</body>
+</html>
