@@ -83,7 +83,7 @@ body {
     color: var(--text-color);
 
     font-family: cursive, sans-serif;
-    font-size: 2.5vh;
+    font-size: 3vh;
     font-style: italic;
     line-height: 1.5;
     text-align: center;
@@ -96,10 +96,11 @@ body {
 #choices {
     position: absolute;
 
-    left: 18vw;
-    bottom: 2vh;
+    left: 20vw;
+    bottom: 5vh;
 
-    width: 64vw;
+    width: 60vw;
+    height: 13vh;
 
     display: flex;
     align-items: stretch;
@@ -135,7 +136,7 @@ body {
     background-color: var(--button-color);
 
     font-family: cursive, sans-serif;
-    font-size: 2.5vh;
+    font-size: 2.8vh;
     line-height: 1.3;
     text-align: center;
 
