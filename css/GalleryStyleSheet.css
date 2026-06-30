@@ -30,7 +30,7 @@ body{
     background-repeat: no-repeat;
     justify-content: center;
     align-content: center;
-    padding: 50px 100px;
+    padding: 30px 100px;
     box-sizing: border-box;
 }
 
@@ -38,12 +38,12 @@ body{
     text-align: center;
     font-size: 36px;
     font-family: cursive, Arial, Helvetica, sans-serif, serif;
-    margin: -20px 0 -15px 0;
+    margin: -25px 0 -15px 0px;
 }
 
 .container hr {
-    margin: 20px auto;
-    width: 85%;
+    margin: 10px auto;
+    width: 45%;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -51,12 +51,12 @@ body{
 .EndingsContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px 10px;
+    gap: -30px 20px;
 }
 
 .EndingsContainer img {
     width: 87%;
-    height: 120px;
+    height: 105px;
 
     object-fit: cover;
 
